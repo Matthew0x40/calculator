@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset='utf-8' />
+		<style>
+		* { margin:0; padding:0; }
+		body { font-family: Arial, Sans-Serif; }
+		ul { list-style-type: circle; margin-left:35px; }
+		
+		.indent {
+			margin-left:15px;
+			margin-bottom:5px;
+		}
+        
+        .section {
+            margin-bottom:15px;
+        }
+		</style>
+	</head>
+	<body>
+		<div style="padding:10px;max-width:500px;">
+			<h1>Help</h1>
+			<br/>
+			<h2>Using the Calculator</h2>
+            <div class="section">
+                <div class="indent">
+                You can use the calculator to preform operators such as addition, subtraction, multiplication, division, modulus, square root, power, etc.<br/><br/>
+                Type expressions into the text field located at the bottom of the window and press the 'Enter' button to submit<br/>
+                The inputted expression will be outputted and aligned left.<br/>
+                The answer will be outputted and will be aligned right. If the inputted expression is invalid, 'Invalid expression' will be outputted instead of an answer
+                </div>
+                
+                <ul>
+                    <li>This calculator follows the <a href="http://en.wikipedia.org/wiki/Order_of_operations">Order of Operations</a> (PEMDAS)</li>
+                    <li>A number divided by zero will either output 'Infinity' or '-Infinity'</li>
+                    <li>Zero divided by Zero will output 'NaN' meaning 'Not a Number'</li>
+                    <li>Both 'Infinity' and 'NaN' (case sensitive) are valid numbers that can be used in expressions</li>
+                </ul>
+            </div>
+			
+			<h2>Variables</h2>
+            <div class="section">
+                <div class="indent">
+                    The following characters are the only valid characters for a variable name: <span style="font-style:italic;">abcdefghijklmnopqrstuvwxyz1234567890_</span><br/>
+                    Variable names cannot have spaces in them.<br/><br/>
+                    
+                    <h4>Assignment</h4>
+                    <div class="section">
+                    The format for assignment is:<br/>
+                    <span class="indent" style="font-style:italic;">{expression} -> {name}</span><br/><br/>
+                    
+                    {name} is a valid variable name
+                    {expression} can be a math expression or just a number. Examples:<br/>
+                    <div class="indent" style="font-style:italic;">5 + 5 * 5 -> x<br/>
+                    (5 + 5) * 5 -> x<br/>
+                    5 -> x</div><br/>
+                    
+                    There does not have to be spaces around the '->'. Example:<br/>
+                    <span class="indent" style="font-style:italic;">5->x</span><br/><br/>
+                    
+                    '- >' also works (single space between - and >). Example:<br/>
+                    <span class="indent" style="font-style:italic;">5 - > x</span><br/>
+                    </div>
+                    
+                    <h4>Recall</h4>
+                    <div class="section">
+                    Recall outputs the value of a variable, or "No variable for name" if a variable with the inputted name does not exist.<br/><br/>
+                    
+                    The format for recall is:<br/>
+                    <span class="indent" style="font-style:italic;">recall {name}</span><br/>
+                    </div>
+                    
+                    <h4>Deletion</h4>
+                    <div class="section">
+                    Attempts to delete a variable, then outputs "Variable deleted" if deletion successful or "No variable for name" if a variable with the inputted name does not exist.<br/><br/>
+                    
+                    The format for deletion is:<br/>
+                    <span class="indent" style="font-style:italic;">delvar {name}</span><br/>
+                    </div>
+                </div>
+            </div>
+			
+			<h2>Menu Bar</h2>
+            <div class="section">
+                <div class="indent">
+                    <h3>Edit</h3>
+                    <div class="section">
+                        <div class="indent">
+                            <h4>Recall Variables</h4>
+                            <div class="section">
+                                Opens a menu where you can see a list of all assigned variables names and
+                                their values. From that menu, you can delete, create, or assign to variables.
+                            </div>
+                            </div>
+                            <h4>Clear Output</h4>
+                            <div class="section">
+                                Clears the output text area
+                            </div>
+                            <h4>History</h4>
+                            <div class="section">
+                                View all inputted expressions, there is not very much difference between this
+                                and the normal output except History is not cleared by 'Clear Output'.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>
